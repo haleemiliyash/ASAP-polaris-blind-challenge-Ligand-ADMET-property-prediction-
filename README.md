@@ -15,5 +15,6 @@ Absorption, Distribution, Metabolism, Excretion, Toxicology - or ADMET - endpoin
 **LogD (protocol):** like solubility - but then in fatty tissue - LogD is a measure of a molecule's lipophilicity, or how well it dissolves in fat. LogD is calculated by comparing a molecule's solubility in octanol, a fat-like substance, to its solubility in water.
 
 **Cell permeation (MDR1-MDCKII, protocol):** MDCKII-MDR1 is a cell line that's used to model cell permeation i.e. how well drug compounds will permeate cell layers. For coronaviruses this is a critical endpoint because there is increasing evidence that afflictions such as long-covid are caused by (remnant) virus particles in the brain, and blood-brain-barrier (BBB) permeation is critical for drug candidates to reach the brain.
+![Image Alt](https://github.com/haleemiliyash/ASAP-polaris-blind-challenge-Ligand-ADMET-property-prediction-/blob/main/data%20set%20detail.png?raw=true)
 
 
