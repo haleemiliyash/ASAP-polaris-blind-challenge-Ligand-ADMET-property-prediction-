@@ -17,4 +17,59 @@ Absorption, Distribution, Metabolism, Excretion, Toxicology - or ADMET - endpoin
 **Cell permeation (MDR1-MDCKII, protocol):** MDCKII-MDR1 is a cell line that's used to model cell permeation i.e. how well drug compounds will permeate cell layers. For coronaviruses this is a critical endpoint because there is increasing evidence that afflictions such as long-covid are caused by (remnant) virus particles in the brain, and blood-brain-barrier (BBB) permeation is critical for drug candidates to reach the brain.
 ![Image Alt](https://github.com/haleemiliyash/ASAP-polaris-blind-challenge-Ligand-ADMET-property-prediction-/blob/main/data%20set%20detail.png?raw=true)
 
+## Libraries Used:
+
+* Seaborn
+* Pandas
+* Numpy 
+* Random forest Regression
+* Json
+* Sklearn
+
+## Approach:
+1. Dataset Description:
+
+The raw training dataset contained 434 entries and 6 columns, with CxSmiles as the only feature and five target endpoints:
+
+LogD
+MDR1-MDCKII
+HLM (Human Liver Microsomes)
+MLM (Mouse Liver Microsomes)
+KSOL (Solubility)
+The dataset had several missing values (NaNs) in the target columns.
+
+2. Missing Value Handling:
+To address missing values, Tanimoto similarity was used between RDKit fingerprints. The values for missing endpoints were filled based on the most similar compounds' fingerprints.
+
+3. Feature Engineering:
+Initially, only one feature (CxSmiles) was available, which could limit model performance. To enhance the feature set and improve accuracy, Lipinski Descriptors were extracted using RDKit:
+
+Molecular weight (MolWt)
+Octanol-water partition coefficient (LogP)
+Hydrogen bond donors (NumHDonors)
+Hydrogen bond acceptors (NumHAcceptors)
+This expanded the feature set to:
+
+CxSmiles
+MolWt
+LogP
+NumHDonors
+NumHAcceptors
+4. Models Used for Prediction:
+The following regression models were trained and evaluated:
+
+Linear Regression
+Decision Tree Regression
+Random Forest Regression
+Gradient Boosting Regression
+XGBoost Regression
+5. Model Evaluation Metrics:
+The models were evaluated using:
+
+R² Score (Coefficient of Determination)
+Mean Absolute Error (MAE)
+Mean Squared Error (MSE)
+6. Best Model Performance:
+
+Among all models, Random Forest Regression provided the best results, achieving the highest R² score and the lowest MAE and MSE, indicating superior predictive performance.
 
