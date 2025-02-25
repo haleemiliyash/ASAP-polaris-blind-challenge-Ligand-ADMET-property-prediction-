@@ -31,11 +31,11 @@ Absorption, Distribution, Metabolism, Excretion, Toxicology - or ADMET - endpoin
 
  The raw training dataset contained 434 entries and 6 columns, with CxSmiles as the only feature and five target endpoints:
 
-  LogD
-  MDR1-MDCKII
-  HLM (Human Liver Microsomes)
-  MLM (Mouse Liver Microsomes)
-  KSOL (Solubility)
+  * LogD
+  * MDR1-MDCKII
+  * HLM (Human Liver Microsomes)
+  * MLM (Mouse Liver Microsomes)
+  * KSOL (Solubility)
   The dataset had several missing values (NaNs) in the target columns.
 
 2. Missing Value Handling:
@@ -44,29 +44,28 @@ Absorption, Distribution, Metabolism, Excretion, Toxicology - or ADMET - endpoin
 3. Feature Engineering:
   Initially, only one feature (CxSmiles) was available, which could limit model performance. To enhance the feature set and improve accuracy, Lipinski Descriptors were extracted using RDKit:
 
-  Molecular weight (MolWt)
-  Octanol-water partition coefficient (LogP)
-  Hydrogen bond donors (NumHDonors)
-  Hydrogen bond acceptors (NumHAcceptors)
+  * Molecular weight (MolWt)
+  * Octanol-water partition coefficient (LogP)
+  * Hydrogen bond donors (NumHDonors)
+  * Hydrogen bond acceptors (NumHAcceptors)
   This expanded the feature set to:
-
-  CxSmiles
-  MolWt
-  LogP
-  NumHDonors
-  NumHAcceptors
+  * CxSmiles
+  * MolWt
+  * LogP
+  * NumHDonors
+  * NumHAcceptors
 4. Models Used for Prediction:
   The following regression models were trained and evaluated:
-  Linear Regression
-  Decision Tree Regression
-  Random Forest Regression
-  Gradient Boosting Regression
-  XGBoost Regression
+  * Linear Regression
+  * Decision Tree Regression
+  * Random Forest Regression
+  * Gradient Boosting Regression
+  * XGBoost Regression
 5. Model Evaluation Metrics:
   The models were evaluated using:
-  R² Score (Coefficient of Determination)
-  Mean Absolute Error (MAE)
-  Mean Squared Error (MSE)
+  * R² Score (Coefficient of Determination)
+  * Mean Absolute Error (MAE)
+  * Mean Squared Error (MSE)
 6. Best Model Performance:
 
   Among all models, Random Forest Regression provided the best results, achieving the highest R² score and the lowest MAE and MSE, indicating superior predictive performance.
