@@ -29,7 +29,7 @@ Absorption, Distribution, Metabolism, Excretion, Toxicology - or ADMET - endpoin
 ## Approach:
 1. Dataset Description:
 
-  The raw training dataset contained 434 entries and 6 columns, with CxSmiles as the only feature and five target endpoints:
+ The raw training dataset contained 434 entries and 6 columns, with CxSmiles as the only feature and five target endpoints:
 
   LogD
   MDR1-MDCKII
