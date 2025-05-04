@@ -68,5 +68,10 @@ Absorption, Distribution, Metabolism, Excretion, Toxicology - or ADMET - endpoin
   * Mean Squared Error (MSE)
 6. Best Model Performance:
 
-  Among all models, Random Forest Regression provided the best results, achieving the highest R² score and the lowest MAE and MSE, indicating superior predictive performance.
+  Among all models, XG Boost Regression provided the best results, achieving the highest R² score and the lowest MAE and MSE, indicating superior predictive performance.
+
+
+  Overview of Model Evaluation matrix
+![image](https://github.com/user-attachments/assets/0a997d7b-b5af-4495-b230-a4c71686b6eb)
+
 
